@@ -1,0 +1,47 @@
+<html>
+<link href='logincss.css' rel='stylesheet' type='text/css'>
+
+<form method="post" action="loginphp.php">
+<div class="box">
+<h1>LOGIN</h1>
+
+<input type="email" name="email" class="email" />
+  
+<input type="password" name="pass"  class="email" />
+  
+<input type="submit" class="btn" name="signin" value="Sign In">
+
+  
+</div> <!-- End Box -->
+  
+</form>
+<p>Forgot your password?<a href="home_page.html" ><u style="color:#f1c40f;">Click Here!</u></a></p>
+  
+<script>
+    function field_focus(field, email)
+  {
+    if(field.value == email)
+    {
+      field.value = '';
+    }
+  }
+
+  function field_blur(field, email)
+  {
+    if(field.value == '')
+    {
+      field.value = email;
+    }
+  }
+
+//Fade in dashboard box
+$(document).ready(function(){
+    $('.box').hide().fadeIn(1000);
+    });
+
+//Stop click event
+$('a').click(function(event){
+    event.preventDefault(); 
+	});
+    </script>
+</html>

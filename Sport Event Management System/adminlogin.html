@@ -1,0 +1,62 @@
+<html>
+<link href='logincss.css' rel='stylesheet' type='text/css'>
+
+<form method="post" action="Admin Dashboard.html">
+<div class="box">
+<h1>LOGIN</h1>
+
+<input type="email" name="email" class="email" />
+  
+<input type="password" name="pass"  class="email" />
+  
+<input type="submit" class="btn" name="signin" value="Sign In">
+
+  
+</div> <!-- End Box -->
+  
+</form>
+<p>Forgot your password?<a href="home_page.html" ><u style="color:#f1c40f;">Click Here!</u></a></p>
+  
+<script>
+    function field_focus(field, email)
+  {
+    if(field.value == email)
+    {
+      field.value = '';
+    }
+  }
+
+  function field_blur(field, email)
+  {
+    if(field.value == '')
+    {
+      field.value = email;
+    }
+  }
+
+//Fade in dashboard box
+$(document).ready(function(){
+    $('.box').hide().fadeIn(1000);
+    });
+
+//Stop click event
+$('a').click(function(event){
+    event.preventDefault(); 
+	});
+    
+    
+    function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.email.value == "kumaran@gmail.com" && form.pass.value == "kums")
+  {
+     window.open('Admin Dashboard.html')/*displays error message*/
+   /*opens the target page while Id & password matches*/
+  }
+ else
+ {
+    alert("Error Password or Username")
+      window.open('Admin Dashboard.html')/*displays error message*/
+  }
+    </script>
+</html>

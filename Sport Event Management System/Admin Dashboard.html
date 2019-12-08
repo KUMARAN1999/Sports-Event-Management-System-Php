@@ -1,0 +1,39 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="deleteuserdesign.css">
+<h1>ADMIN DASHBOARD</h1>
+<div class="box">
+    <a class="button" href="adduser.html" >Add User</a><br><br><br><br><br>
+	<a class="button" href="#popup2">Delete User</a><br><br><br><br><br>
+    <a class="button" href="viewregister.php">View Registration</a><br><br><br><br><br>
+    <a class="button" href="#popup1">Delete Registration</a><br><br><br><br><br>
+    <a class="button" href="updateresulthtml.html">Update Result</a>
+    <a class="button" href="C:\Users\user\Desktop\registerkums.xml">View File</a>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Delete User</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content"> 
+            <form action="deletephp.php" method="post">
+			<label>Registration Number:</label><br><br>
+            <input type="text" name="reg" id="name" placeholder="Registration Number"><br> <br>
+            <button type="submit" id="submit" >Delete</button>
+            </form>
+		</div>
+	</div>
+</div>
+    <div id="popup2" class="overlay">
+	<div class="popup">
+		<h2>Delete Registration</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content"> 
+            <form action="deleteuserphp.php" method="post">
+			<label>Registration Number:</label><br><br>
+            <input type="text" name="reg" id="name" placeholder="Registration Number"><br> <br>
+            <button type="submit" id="submit" >Delete</button>
+            </form>
+		</div>
+	</div>
+</div>
+</html>
